@@ -1,3 +1,41 @@
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-/*https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp FOR GLYPHS */
+/*Style the password input box*/
+#passwordInput{
+    font-size: 14pt;
+}
+#passwordChecker{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: auto;
+}
+#passwordToTest{
+  width: 881px;
+  font-size: 22pt;
+}
+/*Set the font size for the Clear button*/
+#btnClear{
+  font-size: 22pt;
+}
+/*Style for the source text under the header photo*/
+#headerSource{
+  font-size: 7pt;
+  position: absolute;
+  right: 200px;
+}
+/*Style for the requirements table*/
+#requirementTable{
+  color:white;
+  width: 980px;
+  font-size: 19pt;
+}
+/*Set the requirement for length text to the right*/
+#rtLength{
+  text-align: right;
+}
+/*Set the requirement for an Uoppercase text to the right*/
+#rtUppercase{
+  text-align: right;
+}
+/*Set the requirement for not containing "Password" to the right*/
+#rtPassword{
+  text-align: right;
+}

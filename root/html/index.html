@@ -1,101 +1,146 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <script type="text/javascript" src='../js/javascript.js'> </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <title>Secure Pass</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="../js/clear.js"></script>
+  <script src="../js/checkPassword.js"></script>
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+  </style>
 </head>
+<body class="w3-black">
 
-<title>Kieran Wheatley</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-    <div class="w3-container">
-        <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-        <i class="fa fa-remove"></i></a>
-        <img src="../pics/personal.jpg" alt="Profile photo" style="width:65px;" class="w3-circle w3-right w3-margin  w3-hover-opacity">
-        <h4><b>Kieran Wheatley</b></h4>
-        <p class="w3-text-grey">Welcome!</p>
-    </div>
-    <!--Menu Links-->
-    <div class="w3-bar-block">
-        <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"></i>PORTFOLIO</a>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">ABOUT</a>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">CONTACT</a>
-    </div>
-    <div class = "w3-panel w3-large">
-        <a href = "https://www.facebook.com/profile.php?id=100005217091215"><i class = "fa fa-facebook-official w3-hover-opacity"></i>
-        <a href = "https://www.instagram.com/kieranwheatley_/"><i class = "fa fa-instagram w3-hover-opacity"></i>
-        <a href = "https://twitter.com/KieranWheatley_"><i class="fa fa-twitter w3-hover-opacity"></i>
-        <a href = "https://uk.linkedin.com/in/kieran-wheatley-281b72174"><i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#passwordChecker" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-lock w3-xxlarge"></i>
+    <p>PASSWORD TESTER</p>
+  </a>
+  <a href="#lightKey" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-lightbulb-o w3-xxlarge"></i>
+      <p>LIGHTS KEY</p>
+    </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-info-circle w3-xxlarge"></i>
+      <p>ABOUT</p>
+  </a>
 </nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-    <!-- Header -->
-    <header id="portfolio">
-        <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-        <div class="w3-container">
-            <h1><b>My Portfolio</b></h1>
-            <div class="w3-section w3-bottombar w3-padding-16">
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-lock"><a href="passwordChecker.html"></span> Password Strength Checker</a></button>
-            </div>
-        </div>
-    </header>
-
-    <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-        <h4><b>About Me</b></h4>
-        <p>My name is Kieran Wheatley. I am a first-year student at the University of Plymouth studying BSc(Hons) Computer and Information Security!
-        As you may have seen, there is a portfolio of my work above. Some work may be ongoing whilst some will be completed. These are projects I have worked on either for modules or for my own practice alongside studies.</p>
-
-    <!-- Contact Section -->
-    <div class="w3-container w3-padding-large w3-grey">
-        <h4 id="contact"><b>Contact Me</b></h4>
-        <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-            <div class="w3-third w3-dark-grey">
-                <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-                <p>kieran.wheatley@students.plymouth.ac.uk</p>
-            </div>
-            <div class="w3-third w3-teal">
-                <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-                <p>Plymouth, UK</p>
-            </div>
-            <div class="w3-third w3-dark-grey">
-                <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-                <p>07393632627</p>
-            </div>
-        </div>
-        <hr class="w3-opacity">
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-32 w3-dark-grey">
-        <div class="w3-row-padding">
-            <div class="w3-third">
-                <h3>Enquiries</h3>
-                <p>Please email me if you have any questions regarding any of the work on this site.</br>Template by W3.CSS</p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="w3-black w3-center w3-padding-24">All rights reserved.</a></div>
-
-    <!-- End page content -->
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#passwordChecker" class="w3-bar-item w3-button" style="width:25% !important">PASSWORD TESTER</a>
+    <a href="#lightKey" class="w3-bar-item w3-button" style="width:25% !important">LIGHTS KEY</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+  </div>
 </div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Secure Pass</span></h1>
+    <p>Password strength checking and passsword creation advice and guidance for creating stronger, more secure passwords.</p>
+    <img src="../images/websiteheader.png" alt="Common Passwords" class="w3-image" width="1400" height="1108">
+  <br/><span id="headerSource">Commonly used passwords. Source: https://www.wernjie.com/most-common-passwords/</span>
+  </header>
+
+  <!-- Password Strength Testing Application Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="passwordChecker">
+        <div id="passwordChecker">
+          <h2 class="w3-text-light-grey">Password Strength Tester</h2>
+          <hr class="w3-opacity">
+            <form id="passwordInput">
+                <div class="row">
+                        <input type="password" id="passwordToTest" class="form-control" placeholder="Enter password to test" onKeyUp="validatePassword()"><input type ="button" value="Clear" id="btnClear" onclick="clearInput()">
+                </div>
+                  <div class="requirements">
+                  </br>
+                      <table id="requirementTable">
+                          <tr><!-- Start as the icon for a cross, while requirements are met change to gicon for a tick (done in the checkPassword.js) -->
+                              <td class="rtLength" id="1"><span class="fa fa-times"></span> Contains more than 9 characters</td>
+                              <td class="rtSymbols" id="4" style="text-align:right;">Contains at least one symbol <span class="fa fa-times"></span></td>
+                          </tr>
+                          <tr>
+                              <td class="rtUppercase" id="2"><span class="fa fa-times"></span> Contains uppercase letters</td>
+                              <td class="rtNumbers" id="5" style="text-align:right;">Contains at least one number <span class="fa fa-times"></span></td>
+                          </tr>
+                          <tr>
+                              <td class="rtLowercase" id="3"><span class="fa fa-times"></span> Contains lowercase letters</td>
+                              <td class="rtPassword" id="6" style="text-align:right;">Does not contain the word "Password" <span class="fa fa-times"></span></td>
+                          </tr>
+                      </table>
+                  </div>
+            </form>
+
+        <!-- End Password Strength Testing Application Section -->
+        </div>
+  <!-- Lights Key Section -->
+  <div id="lightKey">
+    <h2 class="w3-text-light-grey">Hue Lights Key</h2>
+    <hr class="w3-opacity">
+      <p>Secure Pass is designed to reflect the layout of the Phillips Hue Lights in Smeaton Lab 109 at the University of Plymouth. Each requirement has
+        a symbol next to it, either a cross or a tick which signify whether or not the relevant requirement has been met or not. When a requirement is not met (and has a red cross
+        next to it), the light in the same position on the wall will be red. When a requirement is met, the cross will become a green tick and the light in the same position
+      will turn green. The two by three requirements grid makes understanding which light matches which requirement very easy.</p>
+  <!-- End Lights Key Section -->
+  </div>
+
+  <!-- About Section -->
+  <div id="about">
+    <h2 class="w3-text-light-grey">About Secure Pass</h2>
+    <hr class="w3-opacity">
+          <h3 style="color:white">Why do you need a strong password?</h3>
+          <p>
+              As our reliance on technology continues to grow, so does the amount of data we need to store digitally. Therefore it is vital that the data remains secure and can only be accessed by the
+              people who should be able to access it. Passwords remain at the forefront of access control yet people are not made aware of the importance of strong passwords. Secure Pass aims to provide guidance
+              on creating stronger passwords without the risk of creating ones that are too complex, which often lead to more vulnerability from people from things such as writing them down on paper or
+              the frustration of not being able to remember then leading to opt for an easy one.
+          </p>
+          <h3 style="color:white">How Secure Pass aims to help.</h3>
+          <p>
+              Stronger passwords utilise different character cases (upper and lower), numbers, symbols and length. Secure Pass checks your inputted password contains all of these as well as being 9 or more characters long
+              and doesn't contain the word "Password" which is frequently one of the most common passwords used. By putting all these different things together, your passwords will be more secure from password
+              cracking tools that are used to gain unauthorised access to accounts.
+          </p>
+          <h3 style="color:white">DISCLAIMER</h3>
+          <p>
+            Secure Pass does not guarantee that your password cannot be cracked through software. Rather, it aims to guide you to create passwords which are more complex to be broken. Do not enter the password
+            are planning on using, instead opt for one that is similar. This is to prevent any potential malware from gaining a copy of a password you intend to use.
+          </p>
+  <!-- End Lights Key Section -->
+  </div>
+</div>
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
 </body>
+
 </html>
