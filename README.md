@@ -9,7 +9,7 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 Google Chrome:
 ![Application on Google Chrome](https://github.com/kieranwheatley/soft166/tree/master/root/images/google.png "Google Chrome")
 Mozilla Firefox:
-![Application on Mozilla Firefox](https://github.com/kieranwheatley/soft166/tree/master/root/images/firefox.png "Mozilla Firefox")
+![Application on Mozilla Firefox](https://github.com/kieranwheatley/soft166/tree/master/root/images/mozilla.png "Mozilla Firefox")
 Microsoft Edge:
 ![Application on Microsoft Edge](https://github.com/kieranwheatley/soft166/tree/master/root/images/edge.png "Microsoft Edge")
 
