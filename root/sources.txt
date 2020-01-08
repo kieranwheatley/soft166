@@ -1,6 +1,0 @@
----WEBSITE TEMPLATE SOURCE---
-https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_dark_portfolio&stacked=h
-
----Media---
-Common Password Header source:
-https://www.wernjie.com/most-common-passwords/
